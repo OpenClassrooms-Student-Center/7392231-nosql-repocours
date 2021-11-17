@@ -45,6 +45,9 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		} else {
 			logger.info("Tutorial not found");
 		}
+		
+		List<Post> allPosts = postRepository.findAll();
+		allPosts.stream().forEach((post) -> logger.info(post.getName()));
 	}
 
 }
