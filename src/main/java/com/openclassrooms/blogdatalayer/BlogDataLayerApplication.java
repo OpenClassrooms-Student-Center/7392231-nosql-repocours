@@ -54,7 +54,7 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		allTutorials.stream().forEach((tutorial) -> logger.info(tutorial.getName()));
 		
 		Post p1 = new Post();
-		p1.setName("post1");
+		p1.setName("Welcome here !");
 		Example<Post> example = Example.of(p1); 
 		
 		p = postRepository.findOne(example);
@@ -64,7 +64,9 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		} else {
 			logger.info("Post not found");
 		}
-
+		
+		List<Post> result = postRepository.findByName("Welcome here !");
+		result.stream().forEach((post) -> logger.info(post.getName()));
 	}
 
 }
