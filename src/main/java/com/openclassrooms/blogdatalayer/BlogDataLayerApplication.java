@@ -38,6 +38,13 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		} else {
 			logger.info("Post not found");
 		}
+		
+		Optional<Tutorial> t = tutorialRepository.findById("6192c22d783f4a2a0a7d9bf3");
+		if(t.isPresent()) {
+			logger.info(t.get().getContent());
+		} else {
+			logger.info("Tutorial not found");
+		}
 	}
 
 }
