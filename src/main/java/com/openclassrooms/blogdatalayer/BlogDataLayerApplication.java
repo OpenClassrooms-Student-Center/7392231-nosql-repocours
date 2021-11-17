@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.domain.Example;
 
 import com.openclassrooms.blogdatalayer.model.LightPost;
+import com.openclassrooms.blogdatalayer.model.LightTutorial;
 import com.openclassrooms.blogdatalayer.model.Post;
 import com.openclassrooms.blogdatalayer.model.Tutorial;
 import com.openclassrooms.blogdatalayer.repository.PostRepository;
@@ -39,6 +40,12 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		
 		List<Post> posts = postRepository.findIdAndNameExcludeOthers();
 		posts.stream().forEach((p) -> logger.info(p.getName()));
+		
+		List<LightTutorial> allTutorials = tutorialRepository.findByOrderByCategoryAsc();
+		allTutorials.stream().forEach((tutorial) -> logger.info(tutorial.getName()));
+		
+		List<Tutorial> tutorials = tutorialRepository.findIdAndNameExcludeOthers();
+		tutorials.stream().forEach((t) -> logger.info(t.getName()));
 	}
 
 }
