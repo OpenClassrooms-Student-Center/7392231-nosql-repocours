@@ -36,6 +36,9 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		List<LightPost> allPosts = postRepository.findByOrderByDateDesc();
 		allPosts.stream().forEach((post) -> logger.info(post.getName()));
+		
+		List<Post> posts = postRepository.findIdAndNameExcludeOthers();
+		posts.stream().forEach((p) -> logger.info(p.getName()));
 	}
 
 }
