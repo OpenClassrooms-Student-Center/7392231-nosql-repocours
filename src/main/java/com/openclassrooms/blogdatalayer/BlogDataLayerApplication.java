@@ -14,7 +14,9 @@ import org.springframework.data.domain.Example;
 import com.openclassrooms.blogdatalayer.model.LightPost;
 import com.openclassrooms.blogdatalayer.model.LightTutorial;
 import com.openclassrooms.blogdatalayer.model.Post;
+import com.openclassrooms.blogdatalayer.model.PostAggregate;
 import com.openclassrooms.blogdatalayer.model.Tutorial;
+import com.openclassrooms.blogdatalayer.model.TutorialAggregate;
 import com.openclassrooms.blogdatalayer.repository.PostRepository;
 import com.openclassrooms.blogdatalayer.repository.TutorialRepository;
 
@@ -46,6 +48,12 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		
 		List<Tutorial> tutorials = tutorialRepository.findIdAndNameExcludeOthers();
 		tutorials.stream().forEach((t) -> logger.info(t.getName()));
+		
+		List<PostAggregate> aggregates = postRepository.groupByDate();
+		aggregates.stream().forEach((aggregate) -> logger.info(String.valueOf(aggregate.getNames().size())));
+	
+		List<TutorialAggregate> tutorialsAggregates = tutorialRepository.groupByCategory();
+		tutorialsAggregates.stream().forEach((tutoAggregate) -> logger.info(tutoAggregate.getCategory() + " : " +String.valueOf(tutoAggregate.getTutorials().size())));
 	}
 
 }
