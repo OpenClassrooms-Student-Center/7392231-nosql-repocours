@@ -67,6 +67,12 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		
 		List<Post> result = postRepository.findByName("Welcome here !");
 		result.stream().forEach((post) -> logger.info(post.getName()));
+		
+		Optional<Tutorial> tutorial  = tutorialRepository.findByName("How to use MongoRepository");
+		logger.info(tutorial.get().getContent());
+		
+		List<Tutorial> tutorials = tutorialRepository.findByShortDescriptionContains("tutorial");
+		tutorials.stream().forEach((tuto) -> logger.info(tuto.getShortDescription()));
 	}
 
 }
