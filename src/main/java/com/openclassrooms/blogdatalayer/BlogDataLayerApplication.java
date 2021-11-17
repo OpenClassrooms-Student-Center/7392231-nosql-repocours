@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.Example;
 
 import com.openclassrooms.blogdatalayer.model.Post;
 import com.openclassrooms.blogdatalayer.model.Tutorial;
@@ -51,6 +52,19 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		
 		List<Tutorial> allTutorials = tutorialRepository.findAll();
 		allTutorials.stream().forEach((tutorial) -> logger.info(tutorial.getName()));
+		
+		Post p1 = new Post();
+		p1.setName("post1");
+		Example<Post> example = Example.of(p1); 
+		
+		p = postRepository.findOne(example);
+		
+		if (p.isPresent()) {
+			logger.info(p.get().getContent());
+		} else {
+			logger.info("Post not found");
+		}
+
 	}
 
 }
