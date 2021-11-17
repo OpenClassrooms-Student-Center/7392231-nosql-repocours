@@ -48,6 +48,9 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		
 		List<Post> allPosts = postRepository.findAll();
 		allPosts.stream().forEach((post) -> logger.info(post.getName()));
+		
+		List<Tutorial> allTutorials = tutorialRepository.findAll();
+		allTutorials.stream().forEach((tutorial) -> logger.info(tutorial.getName()));
 	}
 
 }
