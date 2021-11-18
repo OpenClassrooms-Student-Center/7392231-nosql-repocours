@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.openclassrooms.blogdatalayer.model.Tag;
 import com.openclassrooms.blogdatalayer.model.Tutorial;
 import com.openclassrooms.blogdatalayer.repository.PostRepository;
 import com.openclassrooms.blogdatalayer.repository.TutorialRepository;
@@ -53,6 +54,21 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		newTuto2.setCategory("Spring Cloud");
 		
 		tutorialRepository.insert(List.of(newTuto1, newTuto2));
+		
+		// Add a tutorial with a Tag
+		Tag springTag = new Tag();
+		springTag.setName("Spring Framework");
+		springTag.setSlug("spring-framework");
+		springTag.setDescription("Spring is the most Java framework used on the world.");
+		
+		Tutorial newTuto3 = new Tutorial();
+		newTuto3.setName("How Spring implements the dependency injection pattern");
+		newTuto3.setShortDescription("...");
+		newTuto3.setContent("...");
+		newTuto3.setCategory("Spring");
+		newTuto3.setTag(springTag);
+		
+		tutorialRepository.insert(newTuto3);
 	}
 
 }

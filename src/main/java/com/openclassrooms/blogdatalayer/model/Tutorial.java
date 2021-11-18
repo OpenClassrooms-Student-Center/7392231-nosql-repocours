@@ -14,6 +14,7 @@ public class Tutorial {
 	private String shortDescription;
 	private String content;
 	private String category;
+	private Tag tag;
 	
 	public String getId() {
 		return id;
@@ -44,6 +45,12 @@ public class Tutorial {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	public Tag getTag() {
+		return tag;
+	}
+	public void setTag(Tag tag) {
+		this.tag = tag;
 	}
 	
 }
