@@ -31,10 +31,11 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Tutorial existingTutorial = tutorialRepository.findById("6192c22d783f4a2a0a7d9bf3").get();
-		String newTutorialName = existingTutorial.getName() + " [modified]";
-		existingTutorial.setName(newTutorialName);
-		tutorialRepository.save(existingTutorial);
+		
+		tutorialRepository.deleteById("6192c22d783f4a2a0a7d9bf3");
+		
+		List<Tutorial> tutorials = tutorialRepository.findAll();
+		tutorials.stream().forEach(tutorial -> logger.info(tutorial.getName()));
 	}
 
 }
