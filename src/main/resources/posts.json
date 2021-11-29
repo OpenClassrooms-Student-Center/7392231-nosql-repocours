@@ -1,7 +1,92 @@
-{"_id":{"$oid":"6177a31824f1d205e0b0692d"},"content":"Ths is my first blog post. I'm so happy. I will write about Java, Spring and other cool stuff !","_class":"com.openclassrooms.blogdatalayer.model.Post","name":"Welcome here !","date":{"$date":"2021-02-04T07:04:03.321Z"}}
-{"_id":{"$oid":"6177a3648207e0587345067a"},"content":"Yeah of course you know Java ! It's a fantastic programming language that allows us to create performant application... Let me introduce you this language...","_class":"com.openclassrooms.blogdatalayer.model.Post","name":"Do you know Java ?","date":{"$date":"2021-05-10T07:04:03.321Z"}}
-{"_id":{"$oid":"6177a39b665edf352cf74f90"},"content":"Spring Framework is the most used framework on the Java community. It help you to build application in a good way. I will write a lot about Spring !","_class":"com.openclassrooms.blogdatalayer.model.Post","name":"Do you know Spring ?","date":{"$date":"2021-08-01T07:04:03.321Z"}}
-{"_id":{"$oid":"6178f9e3c2533871717abaf2"},"name":"Spring Data JPA","content":"Do you know Spring Data can help you to manage your data? There are many sub modules as Spring Data JPA or Spring Data MongoDB. Let me explain you...","date":{"$date":"2021-10-27T07:04:03.321Z"},"_class":"com.openclassrooms.blogdatalayer.model.Post"}
-{"_id":{"$oid":"6178fa80b2162e1fd560e33f"},"name":"MongoDB update","content":"That's a news, MongoDB just publish a new update and there are some new cool features ! I will developp this point...","date":{"$date":"2021-10-27T07:04:03.321Z"},"_class":"com.openclassrooms.blogdatalayer.model.Post"}
-{"_id":{"$oid":"618244a55ec6eb500c8b5be0"},"name":"Spring Tool Suite","content":"I know I know many developpers are using IntelIJ but I can convince you to use Spring Tool Suite for Eclipse when you are working on Spring project. Do you want to know why ? I will tell you!","date":{"$date":"2021-11-03T08:13:25.518Z"},"comment":[{"pseudo":"chuck norris","content":"really?"},{"pseudo":"superman","content":"oh yes!"}],"_class":"com.openclassrooms.blogdatalayer.model.Post"}
-{"_id":{"$oid":"618273e087deb21060318688"},"name":"Java Spring Conference in Paris","content":"Are you living in France ? Or are you a big fan of Spring ? Then come meet me at the Java Spring Conference in Paris !","date":{"$date":"2021-11-03T08:13:25.518Z"},"tag":{"name":"Spring Framework","slug":"spring-framework","description":"Spring is the most Java framework used on the world."},"comment":[{"pseudo":"Your fan","content":"I will come !!!!!!!!"}],"_class":"com.openclassrooms.blogdatalayer.model.Post"}
+[{
+  "_id": {
+    "$oid": "6177a31824f1d205e0b0692d"
+  },
+  "content": "This is my first blog post. I'm so happy. I will write about Java, Spring and other cool stuff !",
+  "_class": "com.openclassrooms.blogdatalayer.model.Post",
+  "name": "Welcome!",
+  "date": {
+    "$date": "2021-02-04T07:04:03.321Z"
+  }
+},{
+  "_id": {
+    "$oid": "6177a3648207e0587345067a"
+  },
+  "content": "Yeah of course you know Java ! It's a fantastic programming language that allows us to create performant application... Let me introduce you this language...",
+  "_class": "com.openclassrooms.blogdatalayer.model.Post",
+  "name": "Do you know Java ?",
+  "date": {
+    "$date": "2021-05-10T07:04:03.321Z"
+  }
+},{
+  "_id": {
+    "$oid": "6177a39b665edf352cf74f90"
+  },
+  "content": "Spring Framework is the most popular framework on the Java community. It help you to build application in a good way. I will write a lot about Spring !",
+  "_class": "com.openclassrooms.blogdatalayer.model.Post",
+  "name": "Do you know Spring ?",
+  "date": {
+    "$date": "2021-08-01T07:04:03.321Z"
+  }
+},{
+  "_id": {
+    "$oid": "6178f9e3c2533871717abaf2"
+  },
+  "name": "Spring Data JPA",
+  "content": "Do you know Spring Data can help you to manage your data? There are many sub modules as Spring Data JPA or Spring Data MongoDB. Let me explain you...",
+  "date": {
+    "$date": "2021-10-27T07:04:03.321Z"
+  },
+  "_class": "com.openclassrooms.blogdatalayer.model.Post"
+},{
+  "_id": {
+    "$oid": "6178fa80b2162e1fd560e33f"
+  },
+  "name": "MongoDB update",
+  "content": "That's a news, MongoDB just publish a new update and there are some new cool features ! I will developp this point...",
+  "date": {
+    "$date": "2021-10-27T07:04:03.321Z"
+  },
+  "_class": "com.openclassrooms.blogdatalayer.model.Post"
+},{
+  "_id": {
+    "$oid": "618244a55ec6eb500c8b5be0"
+  },
+  "name": "Spring Tool Suite",
+  "content": "I know I know many developpers are using IntelIJ but I can convince you to use Spring Tool Suite for Eclipse when you are working on Spring project. Do you want to know why ? I will tell you!",
+  "date": {
+    "$date": "2021-11-03T08:13:25.518Z"
+  },
+  "comment": [
+    {
+      "pseudo": "chuck norris",
+      "content": "really?"
+    },
+    {
+      "pseudo": "superman",
+      "content": "oh yes!"
+    }
+  ],
+  "_class": "com.openclassrooms.blogdatalayer.model.Post"
+},{
+  "_id": {
+    "$oid": "618273e087deb21060318688"
+  },
+  "name": "Java Spring Conference in Paris",
+  "content": "Are you living in France ? Or are you a big fan of Spring ? Then come meet me at the Java Spring Conference in Paris !",
+  "date": {
+    "$date": "2021-11-03T08:13:25.518Z"
+  },
+  "tag": {
+    "name": "Spring Framework",
+    "slug": "spring-framework",
+    "description": "Spring is the most Java framework used on the world."
+  },
+  "comment": [
+    {
+      "pseudo": "Your fan",
+      "content": "I will come !!!!!!!!"
+    }
+  ],
+  "_class": "com.openclassrooms.blogdatalayer.model.Post"
+}]
