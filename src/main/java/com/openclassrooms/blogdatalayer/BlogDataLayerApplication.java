@@ -50,7 +50,9 @@ public class BlogDataLayerApplication implements CommandLineRunner {
 		tutorials.stream().forEach((t) -> logger.info(t.getName()));
 		
 		List<PostAggregate> aggregates = postRepository.groupByDate();
-		aggregates.stream().forEach((aggregate) -> logger.info(String.valueOf(aggregate.getNames().size())));
+		aggregates.stream().forEach((aggregate) -> logger.info(
+				aggregate.getDate() + " : " + aggregate.getNames().size())
+				);
 	
 		List<TutorialAggregate> tutorialsAggregates = tutorialRepository.groupByCategory();
 		tutorialsAggregates.stream().forEach((tutoAggregate) -> logger.info(tutoAggregate.getCategory() + " : " +String.valueOf(tutoAggregate.getTutorials().size())));
